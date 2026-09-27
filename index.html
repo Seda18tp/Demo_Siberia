@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siberia GastroBar | Experiencia Gourmet & Coctelería</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#D97706',
+                            goldLight: '#F59E0B',
+                            dark: '#0B0F19',
+                            card: '#161F30',
+                            border: '#1F2E47',
+                            accent: '#38BDF8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif-title { font-family: 'Playfair Display', serif; }
+        .glass-nav { background: rgba(11, 15, 25, 0.88); backdrop-filter: blur(12px); }
+        .hero-bg {
+            background: linear-gradient(180deg, rgba(11, 15, 25, 0.75) 0%, rgba(11, 15, 25, 0.95) 100%),
+                        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-100 antialiased selection:bg-brand-gold selection:text-white">
+
+    <!-- Top Info Bar -->
+    <div class="bg-amber-600/10 border-b border-amber-500/20 text-xs py-2 px-4 text-center text-amber-300 font-medium">
+        <span>✨ ¡Vive la experiencia Siberia GastroBar! Abiertos de Miércoles a Domingo desde las 4:00 PM • Reservas disponibles</span>
+    </div>
+
+    <!-- Navegación Sticky -->
+    <header class="glass-nav sticky top-0 z-50 border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center text-brand-dark font-black text-xl shadow-lg shadow-amber-500/20 group-hover:scale-105 transition">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-wider uppercase font-serif-title text-white">Siberia</span>
+                    <span class="text-xs tracking-widest block text-amber-400 font-bold uppercase -mt-1">GastroBar</span>
+                </div>
+            </a>
+
+            <!-- Menú Escritorio -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+                <a href="#inicio" class="hover:text-amber-400 transition">Inicio</a>
+                <a href="#carta" class="hover:text-amber-400 transition">Nuestra Carta</a>
+                <a href="#nosotros" class="hover:text-amber-400 transition">La Experiencia</a>
+                <a href="#reservas" class="hover:text-amber-400 transition">Reservas</a>
+                <a href="#ubicacion" class="hover:text-amber-400 transition">Ubicación</a>
+            </nav>
+
+            <!-- Botones de Acción -->
+            <div class="flex items-center gap-3">
+                <a href="#reservas" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-brand-dark font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full shadow-lg shadow-amber-500/25 transition">
+                    <i class="fa-solid fa-calendar-check"></i> Reservar Mesa
+                </a>
+                <a href="http://localhost:8000" target="_blank" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-xs px-4 py-2.5 rounded-full transition" title="Acceso al sistema POS GastroSoft">
+                    <i class="fa-solid fa-desktop text-amber-400"></i> Acceso POS
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg min-h-[85vh] flex items-center relative py-20 px-4">
+        <div class="max-w-5xl mx-auto text-center space-y-6">
+            <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 backdrop-blur-md">
+                <i class="fa-solid fa-fire text-amber-500"></i> Gastronomía de Autor & Coctelería Premium
+            </span>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold font-serif-title text-white leading-tight">
+                El punto de encuentro donde el sabor <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">se convierte en arte</span>.
+            </h1>
+            <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+                Disfruta de nuestras carnes maduradas al barril, hamburguesas artesanales, cócteles de autor y el mejor ambiente de la ciudad.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#carta" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-amber-500 hover:bg-amber-400 text-brand-dark font-black text-sm uppercase tracking-wider px-8 py-3.5 rounded-full shadow-xl shadow-amber-500/20 transition transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-book-open"></i> Explorar la Carta
+                </a>
+                <a href="#reservas" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-card/80 hover:bg-brand-card text-white border border-brand-border font-bold text-sm px-8 py-3.5 rounded-full backdrop-blur-md transition">
+                    <i class="fa-solid fa-phone"></i> Contactar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características Rápidas -->
+    <section class="border-y border-brand-border bg-slate-900/60 py-10 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="space-y-1">
+                <div class="text-amber-400 text-2xl mb-1"><i class="fa-solid fa-drumstick-bite"></i></div>
+                <h4 class="font-bold text-sm text-white">Cocción al Barril</h4>
+                <p class="text-xs text-slate-400">Ahumados lentos y cortes premium</p>
+            </div>
+            <div class="space-y-1">
+                <div class="text-amber-400 text-2xl mb-1"><i class="fa-solid fa-martini-glass"></i></div>
+                <h4 class="font-bold text-sm text-white">Coctelería de Autor</h4>
+                <p class="text-xs text-slate-400">Tragos clásicos y creaciones únicas</p>
+            </div>
+            <div class="space-y-1">
+                <div class="text-amber-400 text-2xl mb-1"><i class="fa-solid fa-music"></i></div>
+                <h4 class="font-bold text-sm text-white">Ambiente Único</h4>
+                <p class="text-xs text-slate-400">Música en vivo y zona terraza</p>
+            </div>
+            <div class="space-y-1">
+                <div class="text-amber-400 text-2xl mb-1"><i class="fa-solid fa-mobile-screen"></i></div>
+                <h4 class="font-bold text-sm text-white">Comanda Digital</h4>
+                <p class="text-xs text-slate-400">Atención rápida con GastroSoft</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menú Destacado / Carta -->
+    <section id="carta" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+            <span class="text-amber-400 text-xs font-bold uppercase tracking-widest">Nuestra Selección Especial</span>
+            <h2 class="text-3xl sm:text-5xl font-bold font-serif-title text-white">Platos & Bebidas de la Casa</h2>
+            <p class="text-sm text-slate-400">Elaborados al momento con ingredientes seleccionados y recetas exclusivas de Siberia GastroBar.</p>
+        </div>
+
+        <!-- Filtros Rápidos (Visual) -->
+        <div class="flex flex-wrap justify-center gap-2 mb-10 text-xs font-bold">
+            <button class="px-5 py-2 rounded-full bg-amber-500 text-brand-dark">Todos los Platos</button>
+            <button class="px-5 py-2 rounded-full bg-brand-card text-slate-300 border border-brand-border hover:border-amber-400/50 transition">Hamburguesas</button>
+            <button class="px-5 py-2 rounded-full bg-brand-card text-slate-300 border border-brand-border hover:border-amber-400/50 transition">Al Barril & BBQ</button>
+            <button class="px-5 py-2 rounded-full bg-brand-card text-slate-300 border border-brand-border hover:border-amber-400/50 transition">Coctelería</button>
+        </div>
+
+        <!-- Grilla de Productos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Ítem 1 -->
+            <div class="bg-brand-card border border-brand-border rounded-2xl p-5 hover:border-amber-500/50 transition-all duration-300 hover:-translate-y-1 shadow-lg group">
+                <div class="h-48 rounded-xl bg-slate-800 overflow-hidden mb-4 relative">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Hamburguesa Siberia" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 right-3 bg-brand-dark/80 backdrop-blur-md text-amber-400 font-black text-xs px-3 py-1 rounded-full border border-amber-400/30">TOP 1</span>
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Hamburguesa Siberia Doble Carne</h3>
+                    <span class="text-amber-400 font-extrabold text-base whitespace-nowrap">$26.000</span>
+                </div>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                    Doble medallón de 150g de res seleccionada, queso cheddar fundido, tocineta ahumada, cebolla caramelizada y pan brioche artesanal con papas rústicas.
+                </p>
+                <div class="flex items-center justify-between pt-3 border-t border-brand-border text-xs text-slate-400">
+                    <span><i class="fa-regular fa-clock text-amber-500 mr-1"></i> 15 - 20 min</span>
+                    <span class="text-amber-400/80 font-semibold"><i class="fa-solid fa-check mr-1"></i> Disponible</span>
+                </div>
+            </div>
+
+            <!-- Ítem 2 -->
+            <div class="bg-brand-card border border-brand-border rounded-2xl p-5 hover:border-amber-500/50 transition-all duration-300 hover:-translate-y-1 shadow-lg group">
+                <div class="h-48 rounded-xl bg-slate-800 overflow-hidden mb-4 relative">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Costillas Ahumadas" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 right-3 bg-brand-dark/80 backdrop-blur-md text-amber-400 font-black text-xs px-3 py-1 rounded-full border border-amber-400/30">Especialidad</span>
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Costillas BBQ al Barril</h3>
+                    <span class="text-amber-400 font-extrabold text-base whitespace-nowrap">$34.000</span>
+                </div>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                    Costillitas tiernas ahumadas lentamente durante 6 horas, glaseadas con salsa BBQ secreta de café y panela, acompañadas de mazorca y papas fritas.
+                </p>
+                <div class="flex items-center justify-between pt-3 border-t border-brand-border text-xs text-slate-400">
+                    <span><i class="fa-regular fa-clock text-amber-500 mr-1"></i> 20 - 25 min</span>
+                    <span class="text-amber-400/80 font-semibold"><i class="fa-solid fa-check mr-1"></i> Disponible</span>
+                </div>
+            </div>
+
+            <!-- Ítem 3 -->
+            <div class="bg-brand-card border border-brand-border rounded-2xl p-5 hover:border-amber-500/50 transition-all duration-300 hover:-translate-y-1 shadow-lg group">
+                <div class="h-48 rounded-xl bg-slate-800 overflow-hidden mb-4 relative">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Cócteles de Autor" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 right-3 bg-brand-dark/80 backdrop-blur-md text-amber-400 font-black text-xs px-3 py-1 rounded-full border border-amber-400/30">Bar</span>
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Mojito Siberia Frutos Rojos</h3>
+                    <span class="text-amber-400 font-extrabold text-base whitespace-nowrap">$18.000</span>
+                </div>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                    Ron blanco superior, macerado de frutos rojos silvestres, hierbabuena fresca, toques cítricos de limón tahití y un toque refrescante de soda premium.
+                </p>
+                <div class="flex items-center justify-between pt-3 border-t border-brand-border text-xs text-slate-400">
+                    <span><i class="fa-regular fa-clock text-amber-500 mr-1"></i> 5 - 8 min</span>
+                    <span class="text-amber-400/80 font-semibold"><i class="fa-solid fa-check mr-1"></i> Disponible</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Reservas Directa con WhatsApp -->
+    <section id="reservas" class="py-20 px-4 bg-slate-900/80 border-t border-brand-border relative">
+        <div class="max-w-4xl mx-auto bg-brand-card border border-brand-border rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-amber-500/10 blur-3xl pointer-events-none"></div>
+
+            <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
+                <span class="text-amber-400 text-xs font-bold uppercase tracking-widest">Asegura tu Lugar</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-serif-title text-white">Reserva tu Mesa en Siberia</h2>
+                <p class="text-xs sm:text-sm text-slate-400">Celebra tus fechas especiales, cumpleaños o simplemente una noche entre amigos con la mejor atención personalizada.</p>
+            </div>
+
+            <!-- Formulario Interactivo que genera enlace de WhatsApp -->
+            <form id="formReserva" class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                <div>
+                    <label class="block text-slate-300 font-semibold mb-1">Nombre Completo</label>
+                    <input type="text" id="nombreCliente" required placeholder="Ej. Juan Pérez" class="w-full bg-slate-900 border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-400">
+                </div>
+                <div>
+                    <label class="block text-slate-300 font-semibold mb-1">Teléfono Móvil / WhatsApp</label>
+                    <input type="tel" id="telefonoCliente" required placeholder="Ej. 312 345 6789" class="w-full bg-slate-900 border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-400">
+                </div>
+                <div>
+                    <label class="block text-slate-300 font-semibold mb-1">Fecha de Reserva</label>
+                    <input type="date" id="fechaReserva" required class="w-full bg-slate-900 border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-400">
+                </div>
+                <div>
+                    <label class="block text-slate-300 font-semibold mb-1">Número de Personas</label>
+                    <select id="personasReserva" class="w-full bg-slate-900 border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-400">
+                        <option value="2 Personas">2 Personas (Pareja)</option>
+                        <option value="4 Personas" selected>4 Personas</option>
+                        <option value="6 Personas">6 Personas</option>
+                        <option value="8+ Personas">8 o más Personas (Grupo)</option>
+                    </select>
+                </div>
+                <div class="sm:col-span-2">
+                    <label class="block text-slate-300 font-semibold mb-1">Notas o Petición Especial</label>
+                    <input type="text" id="notasReserva" placeholder="Ej. Celebración de cumpleaños, mesa en terraza..." class="w-full bg-slate-900 border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-400">
+                </div>
+                <div class="sm:col-span-2 pt-2">
+                    <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-brand-dark font-black text-sm uppercase tracking-wider py-4 rounded-xl shadow-lg shadow-amber-500/20 transition flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Confirmar Reserva por WhatsApp
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Información de Contacto y Footer -->
+    <footer id="ubicacion" class="bg-brand-dark border-t border-brand-border pt-16 pb-12 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center text-brand-dark font-black text-sm">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <span class="font-bold text-lg text-white font-serif-title">Siberia GastroBar</span>
+                </div>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    Experiencia gastronómica, asados y coctelería premium. Pasión por la buena mesa y el servicio ágil.
+                </p>
+                <div class="flex gap-3 text-slate-400 text-base">
+                    <a href="#" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:text-amber-400 hover:bg-slate-700 transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:text-amber-400 hover:bg-slate-700 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:text-amber-400 hover:bg-slate-700 transition"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-sm text-white mb-4">Horarios de Atención</h4>
+                <ul class="text-xs text-slate-400 space-y-2">
+                    <li><strong class="text-slate-300">Miércoles a Viernes:</strong> 4:00 PM - 12:00 AM</li>
+                    <li><strong class="text-slate-300">Sábados:</strong> 2:00 PM - 02:00 AM</li>
+                    <li><strong class="text-slate-300">Domingos y Festivos:</strong> 12:00 PM - 10:00 PM</li>
+                    <li><strong class="text-slate-300">Lunes y Martes:</strong> Cerrado por mantenimiento</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-sm text-white mb-4">Ubicación y Contacto</h4>
+                <ul class="text-xs text-slate-400 space-y-2">
+                    <li><i class="fa-solid fa-location-dot text-amber-500 mr-2"></i> Zona Gastronómica Principal</li>
+                    <li><i class="fa-brands fa-whatsapp text-amber-500 mr-2"></i> (+57) 312 000 0000</li>
+                    <li><i class="fa-regular fa-envelope text-amber-500 mr-2"></i> contacto@siberiagastrobar.com</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-sm text-white mb-4">Plataforma Tecnológica</h4>
+                <p class="text-xs text-slate-400 leading-relaxed mb-3">
+                    Establecimiento gestionado con el software <strong>GastroSoft</strong> (SENA ADSO 2026).
+                </p>
+                <a href="http://localhost:8000" target="_blank" class="inline-flex items-center gap-1.5 text-xs text-amber-400 hover:underline font-semibold">
+                    Ir al Sistema de Salón y Caja <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
+            <p>&copy; 2026 Siberia GastroBar • Desarrollado por Omar Sebastian Trujillo Perez • Proyecto Formativo SENA ADSO</p>
+        </div>
+    </footer>
+
+    <!-- Script de Integración con WhatsApp para Reservas -->
+    <script>
+        document.getElementById('formReserva').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombreCliente').value;
+            const tel = document.getElementById('telefonoCliente').value;
+            const fecha = document.getElementById('fechaReserva').value;
+            const personas = document.getElementById('personasReserva').value;
+            const notas = document.getElementById('notasReserva').value || 'Ninguna';
+
+            const mensaje = `¡Hola Siberia GastroBar! Quiero solicitar una reserva:%0A` +
+                            `• *Nombre:* ${nombre}%0A` +
+                            `• *Teléfono:* ${tel}%0A` +
+                            `• *Fecha:* ${fecha}%0A` +
+                            `• *Comensales:* ${personas}%0A` +
+                            `• *Notas especiales:* ${notas}`;
+
+            // Número comercial de destino (puede ajustarse al real)
+            const numeroWhatsApp = "573120000000";
+            window.open(`https://wa.me/${numeroWhatsApp}?text=${mensaje}`, '_blank');
+        });
+    </script>
+</body>
+</html>
